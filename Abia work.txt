@@ -1,0 +1,29 @@
+function validate(e) {
+    e.preventdefaul ();
+
+    
+    const email = document.getElementById('email').value;
+    const pass = document.getElementById('pass').value;
+    const age = document.getElementById('age').value;
+    const msgbox = document.getElementById('message');
+
+    let message = '';
+
+    if (email === '') {
+    message = 'Enter an email.';
+    msgbox.style.color = 'red';
+    } else if (pass ==='') {
+        message = 'Enter a password.';
+        msgbox.style.color = 'red';
+    } else if (age === '') {
+        mesage = 'Enter your age.';
+        msgbox.style.color = 'red';
+    } else {
+        message = 'Login successful';
+        msgbox.style.color = 'green';
+    }
+
+    msgbox.innertext = message;
+}
+
+
